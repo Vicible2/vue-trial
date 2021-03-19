@@ -15,10 +15,11 @@
       <a v-bind:href="url">Games workshop</a> <br>
       <!-- alternative -->
       <a :href="url">Games workshop 2</a>
+      <br>
       <div v-if="showBooks">
         <!-- <p>{{ books[0].title }} - {{ books[0].author }}  - {{ age }}  - {{ genre }}</p> -->
         <ul>
-          <li v-for="book in books">
+          <li v-for="book in books" :class="{fav: book.isFav }">
               <img :src="book.img" :alt="book.title">
             <h3>{{ book.title}}</h3>
             <p>{{ book.author }}</p>

@@ -11,9 +11,9 @@ const app = Vue.createApp({
             y: 0,
             showBoxes: false,
             books: [
-                    {title: 'The Wind', author: 'Patrick Rothfuss', genre: 'Fantasy', img:'assets/book1.png'},
-                    {title: 'The way of kings', author: 'Brandon Sanderson', genre: 'Fantasy', img:'assets/book2.png'},
-                    {title: 'The final empire', author: 'Brandon Sanderson', genre: 'Thriller', img:'assets/book3.png'},
+                    {title: 'The Wind', author: 'Patrick Rothfuss', genre: 'Fantasy', img:'assets/book1.png', isFav: true},
+                    {title: 'The way of kings', author: 'Brandon Sanderson', genre: 'Fantasy', img:'assets/book2.png', isFav: false},
+                    {title: 'The final empire', author: 'Brandon Sanderson', genre: 'Thriller', img:'assets/book3.png', isFav: true},
             ],
             url: 'https://www.games-workshop.com/en-BE/Home'
         } //return object
