@@ -11,16 +11,20 @@
   <body>
     <h1>Hello vue :)</h1>
     <div id="app">
+      <!-- attribute binding -->
+      <a v-bind:href="url">Games workshop</a> <br>
+      <!-- alternative -->
+      <a :href="url">Games workshop 2</a>
       <div v-if="showBooks">
         <!-- <p>{{ books[0].title }} - {{ books[0].author }}  - {{ age }}  - {{ genre }}</p> -->
         <ul>
-            <li v-for="book in books">
-                <h3>{{ book.title}} </h3>
-                <p>{{ book.author }} </p>
-                <p> {{ book.genre }}</p>
-            </li>
+          <li v-for="book in books">
+              <img :src="book.img" :alt="book.title">
+            <h3>{{ book.title}}</h3>
+            <p>{{ book.author }}</p>
+            <p>{{ book.genre }}</p>
+          </li>
         </ul>
-
 
         <button v-on:click="age++">Increase age</button>
         <button v-on:click="age--">Decrease age</button>
@@ -54,10 +58,10 @@
         </div>
       </div>
       <button @click="toggleShowBoxes">
-          <span v-if="showBoxes">Hide Boxes</span>
-          <span v-else>Show Boxes</span>
+        <span v-if="showBoxes">Hide Boxes</span>
+        <span v-else>Show Boxes</span>
       </button>
-      <hr>
+      <hr />
     </div>
 
     <script src="app.js"></script>
