@@ -12,7 +12,16 @@
     <h1>Hello vue :)</h1>
     <div id="app">
       <div v-if="showBooks">
-        <p>{{ title }} - {{ author }} - {{ age }} - {{ genre }}</p>
+        <!-- <p>{{ books[0].title }} - {{ books[0].author }}  - {{ age }}  - {{ genre }}</p> -->
+        <ul>
+            <li v-for="book in books">
+                <h3>{{ book.title}} </h3>
+                <p>{{ book.author }} </p>
+                <p> {{ book.genre }}</p>
+            </li>
+        </ul>
+
+
         <button v-on:click="age++">Increase age</button>
         <button v-on:click="age--">Decrease age</button>
         <button @click="age = 45">Reset age</button>

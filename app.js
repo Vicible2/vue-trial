@@ -9,7 +9,12 @@ const app = Vue.createApp({
             age: 45,
             x: 0,
             y: 0,
-            showBoxes: true
+            showBoxes: false,
+            books: [
+                    {title: 'The Wind', author: 'Patrick Rothfuss', genre: 'Fantasy'},
+                    {title: 'The way of kings', author: 'Brandon Sanderson', genre: 'Fantasy'},
+                    {title: 'The final empire', author: 'Brandon Sanderson', genre: 'Thriller'},
+            ]
         } //return object
     }, //shorthand for function inside of object : name(haakjes) {curly brackets}
     methods: {
