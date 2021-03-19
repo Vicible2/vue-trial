@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vue trial</title>
     <script src="https://unpkg.com/vue@next"></script>
-
-</head>
-<body>
+  </head>
+  <body>
     <h1>Hello vue :)</h1>
     <div id="app">
-       <p>{{ title }} - {{ author }} - {{ age }}</p>
-       <button v-on:click="age++">Increase age</button> 
-       <button v-on:click="age--">Decrease age</button>
-       <button @click="age = 45">Reset age</button>
-       <!-- v-on vue directive: many different types.
+      <div v-if="showBooks">
+        <p>{{ title }} - {{ author }} - {{ age }} - {{ genre }}</p>
+        <button v-on:click="age++">Increase age</button>
+        <button v-on:click="age--">Decrease age</button>
+        <button @click="age = 45">Reset age</button>
+        <!-- v-on vue directive: many different types.
        v-on = event listener 
        @ shortcut for v-on / eventlistener-->
-       <div @click="changeTitle('Oathbreakers')">Change book title</div>
-       <div @click="resetTitle">Reset book title</div>
-
+        <div @click="changeTitle('Oathbreakers')">Change book title</div>
+        <div @click="resetTitle">Reset book title</div>
+      </div>
+      <button @click="toggleShowBooks">
+        <span v-if="showBooks">Hide books</span>
+        <span v-else>Show books</span>
+        <!-- alternative: showBooks == false / v-if="!showBooks"-->
+      </button>
+      <br />
+      <div v-show="showBooks">Currently showing books</div>
+      <!-- v-if takes element outside of DOM completely when  false
+           v-show uses css to take out element: display non, when false, display block when true  -->
     </div>
 
-   
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
