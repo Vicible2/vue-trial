@@ -16,6 +16,7 @@ p, h3, ul {
     padding: 0;
 }
  li {
+     cursor: pointer;
      list-style-type: none;
      background-color: #fff;
      margin: 20px auto;

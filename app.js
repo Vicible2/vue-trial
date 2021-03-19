@@ -43,7 +43,11 @@ const app = Vue.createApp({
         },
         toggleShowBoxes () {
             this.showBoxes = !this.showBoxes
+        },
+        toggleFav (book) {
+            book.isFav = !book.isFav
         }
+
     }
 })
 
