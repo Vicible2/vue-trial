@@ -9,6 +9,7 @@ const app = Vue.createApp({
             age: 45,
             x: 0,
             y: 0,
+            showBoxes: true
         } //return object
     }, //shorthand for function inside of object : name(haakjes) {curly brackets}
     methods: {
@@ -33,6 +34,9 @@ const app = Vue.createApp({
         handleMousemove (ev) {
             this.x = ev.offsetX
             this.y = ev.offsetY
+        },
+        toggleShowBoxes () {
+            this.showBoxes = !this.showBoxes
         }
     }
 })
